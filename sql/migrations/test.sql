@@ -17,3 +17,10 @@ FROM
     customers;
 
 DROP TABLE IF EXISTS names;
+
+-- The following SQL script updates the email address of a customer in the 'customers' table based on their CustomerID.
+UPDATE customers
+SET
+    Email = 'johndoenew@example.com'
+WHERE
+    CustomerID = 1;
