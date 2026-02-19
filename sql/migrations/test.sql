@@ -1,3 +1,4 @@
+-- This SQL script creates a new table called 'names', populates it with data from the 'customers' table, and then drops the 'names' table.
 DROP TABLE IF EXISTS names;
 
 CREATE TABLE names (

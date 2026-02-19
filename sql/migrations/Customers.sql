@@ -1,3 +1,4 @@
+-- This SQL script creates a new table called 'customers', populates it with sample data, and defines the structure of the table with appropriate data types and constraints.
 CREATE TABLE customers (
     CustomerID INT PRIMARY KEY AUTO_INCREMENT,
     FirstName VARCHAR(50),
