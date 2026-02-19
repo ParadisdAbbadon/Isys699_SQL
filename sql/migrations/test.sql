@@ -24,3 +24,19 @@ SET
     Email = 'johndoenew@example.com'
 WHERE
     CustomerID = 1;
+
+-- Testing the DELETE statement by adding a new customer, then deleting that customer from the 'customers' table.
+INSERT INTO
+    customers (FirstName, LastName, Email, Phone)
+VALUES
+    (
+        'Bob',
+        'Smith',
+        'bobsmith@example.com',
+        '555-3456'
+    );
+
+DELETE FROM customers
+WHERE
+    FirstName = 'Bob'
+    AND LastName = 'Smith';
