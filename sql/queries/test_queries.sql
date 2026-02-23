@@ -20,3 +20,22 @@ WHERE
     AND Price <= 7000
 ORDER BY
     Price ASC;
+
+-- Query to select all motorcycles that have a make starting with the letter 'h'.
+SELECT
+    *
+FROM
+    motorcycles
+WHERE
+    Make LIKE 'h%';
+
+/* 
+Query to select all motorcycles that have a model name that is has the letter 'R' 
+as the 5th character and is at least 6 characters long.
+*/
+SELECT
+    *
+FROM
+    motorcycles
+WHERE
+    Model LIKE '____R%';
