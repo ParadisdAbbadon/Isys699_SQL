@@ -39,3 +39,21 @@ FROM
     motorcycles
 WHERE
     Model LIKE '____R%';
+
+-- Query to test the inner join between customers and orders tables to get all customers and their orders.
+SELECT
+    *
+FROM
+    customers
+    INNER JOIN Orders ON customers.CustomerID = Orders.CustomerID;
+
+SELECT
+    o.customer_id,
+    o.order_date,
+    o.motorcycle_id,
+    o.Quantity,
+    c.first_name,
+    c.last_name
+FROM
+    Orders o
+    JOIN customers c ON o.CustomerID = c.CustomerID;

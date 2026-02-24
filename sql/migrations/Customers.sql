@@ -31,3 +31,12 @@ VALUES
         'alicejohnson@example.com',
         '555-9012'
     );
+
+ALTER TABLE customers
+RENAME COLUMN CustomerID TO customer_id;
+
+ALTER TABLE customers
+RENAME COLUMN FirstName TO first_name;
+
+ALTER TABLE customers
+RENAME COLUMN LastName TO last_name;

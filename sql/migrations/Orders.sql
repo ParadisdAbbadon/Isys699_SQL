@@ -20,3 +20,12 @@ INSERT INTO
     Orders (order_date, CustomerID, MotorcycleID, Quantity)
 VALUES
     ('2023-01-01', 1, 1, 5);
+
+ALTER TABLE Orders
+RENAME COLUMN MotorcycleID TO motorcycle_id;
+
+ALTER TABLE Orders
+RENAME COLUMN CustomerID TO customer_id;
+
+ALTER TABLE Orders
+RENAME COLUMN OrderID TO order_id;

@@ -21,3 +21,6 @@ VALUES
 
 ALTER TABLE motorcycles
 RENAME COLUMN id TO MotorcycleID;
+
+ALTER TABLE motorcycles
+RENAME COLUMN MotorcycleID TO motorcycle_id;
