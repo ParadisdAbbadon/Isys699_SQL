@@ -56,4 +56,4 @@ SELECT
     c.last_name
 FROM
     Orders o
-    JOIN customers c ON o.CustomerID = c.CustomerID;
+    JOIN customers c ON o.customer_id = c.customer_id;
