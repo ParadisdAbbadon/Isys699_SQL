@@ -57,3 +57,16 @@ SELECT
 FROM
     Orders o
     JOIN customers c ON o.customer_id = c.customer_id;
+
+-- Query to test the union of first names and last names from customers and employees tables.
+SELECT
+    first_name,
+    last_name
+FROM
+    Customers
+UNION
+SELECT
+    first_name,
+    last_name
+FROM
+    employees;
