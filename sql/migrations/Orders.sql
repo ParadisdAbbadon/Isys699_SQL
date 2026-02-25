@@ -29,3 +29,13 @@ RENAME COLUMN CustomerID TO customer_id;
 
 ALTER TABLE Orders
 RENAME COLUMN OrderID TO order_id;
+
+INSERT INTO
+    Orders (order_date, customer_id, motorcycle_id, Quantity)
+VALUES
+    ('2023-01-15', 1, 3, 1);
+
+INSERT INTO
+    Orders (order_date, customer_id, motorcycle_id, Quantity)
+VALUES
+    ('2023-01-20', 2, 2, 2);
