@@ -70,3 +70,19 @@ SELECT
     last_name
 FROM
     employees;
+
+-- Query to test the use of window functions to calculate the average price of motorcycles.
+SELECT
+    motorcycle_id,
+    price,
+    AVG(price) OVER () AS average_price
+FROM
+    motorcycles;
+
+-- Query to test the use of window functions to calculate the average year of motorcycles, allowing for null values in the year column.
+SELECT
+    motorcycle_id,
+    YEAR,
+    ROUND(AVG(COALESCE(YEAR, 0)) OVER (), 0) AS average_year
+FROM
+    motorcycles;
