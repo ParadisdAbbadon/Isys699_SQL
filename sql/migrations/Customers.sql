@@ -40,3 +40,12 @@ RENAME COLUMN FirstName TO first_name;
 
 ALTER TABLE customers
 RENAME COLUMN LastName TO last_name;
+
+ALTER TABLE customers
+MODIFY COLUMN last_name VARCHAR(50) NULL;
+
+ALTER TABLE customers
+MODIFY COLUMN Email VARCHAR(100) NULL;
+
+ALTER TABLE customers
+MODIFY COLUMN Phone VARCHAR(20) NULL;
