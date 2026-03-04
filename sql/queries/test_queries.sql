@@ -79,10 +79,27 @@ SELECT
 FROM
     motorcycles;
 
--- Query to test the use of window functions to calculate the average year of motorcycles, allowing for null values in the year column.
+/* Query to test the use of window functions to calculate the average year of motorcycles, 
+allowing for null values in the year column.*/
 SELECT
     motorcycle_id,
     YEAR,
     ROUND(AVG(COALESCE(YEAR, 0)) OVER (), 0) AS average_year
 FROM
     motorcycles;
+
+/* Query to test the use of window functions to calculate the average price of motorcycles, 
+allowing for null values in the price column.*/
+SELECT
+    motorcycle_id,
+    YEAR,
+    price,
+    CASE
+        WHEN YEAR IS NULL THEN 1
+        ELSE 0
+    END AS is_year_null
+FROM
+    motorcycles
+ORDER BY
+    is_year_null ASC,
+    price DESC;
